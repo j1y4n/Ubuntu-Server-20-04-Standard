@@ -47,6 +47,9 @@ systemctl status fail2ban
 ufw enable
 ufw status
 
+# Install Logwatch
+apt-get install logwatch
+
 # Final message
 echo All application have been installed, the script will now quit.
  
