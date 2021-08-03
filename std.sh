@@ -55,6 +55,7 @@ nano /home/jiyan/.ssh/authorized_keys
 chown 700 /home/jiyan/.ssh/authorized_keys
 chown -R jiyan:jiyan /home/jiyan
 passwd jiyan
+passwd
 
 # Enable Services
 systemctl enable fail2ban
