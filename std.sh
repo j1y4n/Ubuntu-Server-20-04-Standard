@@ -34,6 +34,9 @@ apt install python3-pip -y
 # Fail2ban config
 cp jail.local /etc/fail2ban/jail.local
 
+# SSH config
+cp sshd_config /etc/ssh/sshd_config
+
 # UFW setup
 ufw allow OpenSSH
 ufw allow http
@@ -41,14 +44,24 @@ ufw allow https
 ufw default allow outgoing
 ufw default deny incoming
 
+# Install Logwatch
+apt-get install logwatch
+
+# Add Admin User
+useradd -m jiyan
+usermod -aG root jiyan
+mkdir /home/jiyan/.ssh
+nano /home/jiyan/.ssh/authorized_keys
+chown 700 /home/jiyan/.ssh/authorized_keys
+chown -R jiyan:jiyan /home/jiyan
+passwd jiyan
+
 # Enable Services
 systemctl enable fail2ban
 systemctl status fail2ban
 ufw enable
 ufw status
-
-# Install Logwatch
-apt-get install logwatch
+service ssh restart
 
 # Final message
 echo All application have been installed, the script will now quit.
