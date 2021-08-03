@@ -49,7 +49,7 @@ apt-get install logwatch
 
 # Add Admin User
 useradd -m jiyan
-usermod -aG root jiyan
+usermod -aG sudo jiyan
 mkdir /home/jiyan/.ssh
 nano /home/jiyan/.ssh/authorized_keys
 chown 700 /home/jiyan/.ssh/authorized_keys
