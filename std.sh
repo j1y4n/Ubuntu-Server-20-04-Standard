@@ -13,11 +13,14 @@ apt-get update
 #wget https://atom.io/download/deb/atom-amd64.deb
 #wget https://launcher.mojang.com/download/Minecraft.deb
  
+clear
+
 # Install from Repo
 apt-get install fail2ban
 apt-get install unattended-upgrades
 apt-get install ufw
- 
+
+clear
 # Install DEB files
 #dpkg -i keybase_amd64.deb
 #dpkg -i atom-amd64.deb
@@ -26,7 +29,7 @@ apt-get install ufw
  
 # Clean up DEB files
 #rm -f keybase_amd64.deb
- 
+clear
 # Install requirements
 apt install python3
 apt install python3-pip -y
@@ -46,7 +49,7 @@ ufw default deny incoming
 
 # Install Logwatch
 apt-get install logwatch
-
+clear
 # Add Admin User
 useradd -m jiyan
 usermod -aG sudo jiyan
@@ -54,9 +57,10 @@ mkdir /home/jiyan/.ssh
 nano /home/jiyan/.ssh/authorized_keys
 chown 700 /home/jiyan/.ssh/authorized_keys
 chown -R jiyan:jiyan /home/jiyan
+clear
 echo Change password user:
 passwd jiyan
-Change password ROOT USER:
+echo Change password ROOT USER:
 passwd
 
 # Enable Services
