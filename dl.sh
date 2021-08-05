@@ -10,6 +10,6 @@ git clone https://github.com/j1y4n/Ubuntu-Server-20-04-Standard.git
 
 cd Ubuntu-Server-20-04-Standard
 
-chmod +x std.sh
+chmod +x *.sh
 
 ./std.sh
