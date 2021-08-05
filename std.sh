@@ -54,7 +54,9 @@ mkdir /home/jiyan/.ssh
 nano /home/jiyan/.ssh/authorized_keys
 chown 700 /home/jiyan/.ssh/authorized_keys
 chown -R jiyan:jiyan /home/jiyan
+echo Change password user:
 passwd jiyan
+Change password ROOT USER:
 passwd
 
 # Enable Services
